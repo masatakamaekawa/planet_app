@@ -15,8 +15,8 @@ class CreatePlanetTable extends Migration
     {
         Schema::create('planet', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('englishname');
+            $table->string('name_ja');
+            $table->string('name_en');
             $table->integer('radius');
             $table->integer('weight');
         });
