@@ -38,9 +38,9 @@
                 </tr>
                 <a href="/planets/{{ $planet->id }}"></a>
             </table>
-            @endforeach
+        @endforeach
     </ul>
             <!-- 新規登録画面へジャンプする -->
-            <a href="/planets/create">新規登録</a>
+    <a href="/planets/create">新規登録</a>
 </body>
 </html>

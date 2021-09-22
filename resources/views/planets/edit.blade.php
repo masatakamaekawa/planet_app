@@ -28,8 +28,6 @@
         @csrf
         <!-- formタグはPUTやDELETEをサポートしていないため、@methodで指定する必要がある -->
         @method('PATCH')
-        <!-- idはそのまま -->
-        <input name="id" value="{{ $planet->id }}">
         <p>
             <label for="name_ja">名前</label>
             <input type="text" name="name_ja" value="{{ old('name_ja', $planet->name_ja) }}">
