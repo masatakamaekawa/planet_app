@@ -10,13 +10,13 @@
 </head>
 
 <body>
-        @if ($errors->any())
+    @if ($errors->any())
         <div class="error">
             <p>
                 <b>エラーがあります。</b>
             </p>
             <ul>
-                @foreach($errors->all() as $error)
+                @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
                 @endforeach
             </ul>
@@ -26,20 +26,24 @@
     <form action="/items" method="post">
         @csrf
         <p>
-            <label for="name_ja">名前<input type="text" name="name_ja" value="{{ old('name_ja',$planet->name_ja) }}"></label>
+            <label for="name_ja">名前<input type="text" name="name_ja"
+                    value="{{ old('name_ja', $planet->name_ja) }}"></label>
         </p>
         <p>
-            <label for="name_en">名前(英語)<input type="text" name="name_en" value="{{ old('name_en',$planet->name_en) }}"></label>
+            <label for="name_en">名前(英語)<input type="text" name="name_en"
+                    value="{{ old('name_en', $planet->name_en) }}"></label>
         <p>
-            <label for="radius">半径<input type="text" name="radius" value="{{ old('radius',$planet->radius) }}"></label>
+            <label for="radius">半径<input type="text" name="radius"
+                    value="{{ old('radius', $planet->radius) }}"></label>
         </p>
         <p>
-            <label for="weight">重量<input type="text" name="weight" value="{{ old('weight',$planet->weight) }}"></label>
+            <label for="weight">重量<input type="text" name="weight"
+                    value="{{ old('weight', $planet->weight) }}"></label>
         </p>
         <p>
 
             <input type="submit" value="更新">
-            <p><b><a href="/planets">戻る</a></b></p>
+        <p><b><a href="/planets">戻る</a></b></p>
     </form>
 </body>
 
